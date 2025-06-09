@@ -1,0 +1,248 @@
+﻿@font-face {
+    font-family: 'Robotech Complete';
+    src: url('../fuente/RobotechComplete.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Courier New';
+    src: url('../fuente/cour.ttf') format('truetype');
+}
+
+body {
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+    background-color: darkolivegreen;
+    padding: 1%;
+    border: 1%;
+    margin: 1%;
+}
+
+.logo, footer {  /*logo principal y footer*/
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 30px;            /*separa el <footer> del final del <main>*/
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    background-color: gray;
+    font-size: small;
+}
+
+.imagen-logo {          /*reduce el logo al 50% de la pantalla*/
+    width: 50%;
+}
+
+.imagen-modo {              /*reduce el tamaño del botón de cambio de modo y le pone una separación con la barra navegadora de abajo*/
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+.modo {                     /*justifica el botón de cambio de modo a la derecha*/
+    display: flex;
+    justify-content: right;
+}
+
+.fuente-robotech, .encabezado-tabla, h1 {  /*Fuente del <footer>, encabezado de la tabla del Ranking y de los títulos principales de cada html*/
+    font-family: 'Robotech Complete', 'Courier New', Courier, monospace;
+}
+
+h1 {                     /*Título principal de cada html salvo del inicio que no tiene título*/
+    font-size: 35px;
+    margin: 0;
+}
+
+.tabla-dinamica {       /*Ranking y formulario de altas*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+.encabezado-tabla {             /*de la tabla del Ranking*/
+    background-color: black;
+    color: white;
+}
+
+.altas {
+    width: 50%;
+    margin: 0px;
+}
+
+.editar {
+    width: 15%;
+    margin: auto;
+}
+
+#tabla-ranking td#editar {          /*Pone verticales los botones de Modificar y Agregar al lado de cada fila de la tabla*/
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+#referencias {                  /*Referencias de Modificar y Eliminar de la tabla*/
+    display: flex;
+    align-items: center;
+}
+
+#referencias p {            /*Ubica juntas las referencias*/
+    margin: 0px;
+}
+
+.registro {                     /*Recuadro del formulario*/
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px; 
+    padding: 15px 50px 15px 50px;
+    text-align: center;
+}
+
+table, td, tr, .registro {          /*Recuadro de la tabla de Ranking (exterior e interior), del formulario de altas y modificaciones, y del registro de enlistado*/
+    border: 5px solid black;
+}
+
+.registro input {            /*Agranda los renglones de los inputs y les da una separación con el <labal> que hay abajo*/
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.boton-enlistar {       /*Le quita márgenes y padding que hereda de "arriba" a la imagen que funciona como botón Enviar"*/
+    display: flex;
+    border: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+.captcha {                           /*Separa los números del captcha*/
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.enlistate {                 /*Pone el formulario vertical, lo centra, centra su contenido y le da una separación con la barra de navegación de arriba*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.main {
+    margin-top: 50px;   /*separa el <main> de la barra de navegación*/
+    text-align: center;
+}
+
+.main-mechas {               /*Pone en modo mobil todos las naves y mechas junto con su descripción.*/
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+    align-items: center;
+    font-size: medium;
+    border-color: black;
+    border-style: solid;
+    padding: 3px;
+}
+
+.main-lista-mechas {        /*Pone en modo mobil la lista de Mechas y naves*/
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid;
+    margin-top: 50px;
+}
+
+.mecha {                    /*Separa la descripción y las imágenes de las naves y mechas para que no queden pegadas entre si*/
+    margin: 0 10px 0 10px;
+}
+
+li a {                      /*links de posición de la lista de Naves y Mechas*/
+    text-decoration: none;
+    color: black;
+}
+
+#presentacion {         /*Texto de presentación de la página principal*/
+    text-align: justify;
+}
+
+#citar-a {    
+    text-align: right;  /*pone a la derecha el autor de la cita de la página principal*/
+}
+
+
+/* Aquí comienzan las clases del menú de navegación*/
+.menu-hamburguesa {          /*menú "hamburguesa" en modo mobil*/
+    display: flex;
+    justify-content: center;
+    padding: 1%; 
+}
+
+.menu {                          /*Centra las opciones del menú y hace que ocupen el ancho de la pantalla*/
+    width: 100%;
+    display: flex;
+    background-color: black; 
+    text-align: center;
+}
+
+ul.navegacion {             /*Oculta al cargar el html el menú mientras no se clickee*/
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+}
+
+ul.navegacion.show {        /*Muestra y oculta el menú con cada click*/
+    display: flex;
+}
+
+ul.navegacion li {       /*Da una separación entre cada opción del menú desplegado*/
+    margin: 0px;
+    padding: 10px;
+}
+
+ul.navegacion li a {        /*Estilo de cada opción del menú desplegado*/
+    text-decoration: none;
+    color: white;
+}
+
+ul.navegacion li:hover {        /*Cambia a color gris cuando el mouse se posiciona sobre cada opción del menú desplegado*/
+    background-color: gray;
+}
+/*Fin de clases del menú de navegación*/
+
+
+
+@media only screen and (min-width: 660px){      /*Cambios en modo PC*/
+
+    .boton-menu {           /* Se oculta la "hamburguesa" del menú*/
+       display: none;
+    }
+   
+    ul.navegacion {                  /* Cambia la direccion del flex en el menú */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-mechas {              /* Cambia la dirección del flex de las imágenes y descripciones de Naves y Mechas */
+        flex-direction: row;
+    }
+    .main-lista-mechas {            /* Cambia la dirección del flex de la lista de Naves y Mechas*/
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .tabla-dinamica {              /*Cambia la dirección de la sección Ranking a modo horizontal en versión PC*/
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+
